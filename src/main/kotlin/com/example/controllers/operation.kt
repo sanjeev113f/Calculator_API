@@ -11,19 +11,16 @@ import io.micronaut.http.annotation.Post
 
 @Controller("/operation")
 open class Operation {
-
     private val service = OperationService()
 
-    @Post(uri = "/add", consumes =[MediaType.APPLICATION_JSON], produces = [MediaType.APPLICATION_JSON])
+    @Post(uri = "/add", consumes = [MediaType.APPLICATION_JSON], produces = [MediaType.APPLICATION_JSON])
     fun add(@Body body: OperationRequestBody): HttpResponse<OperationResponseBody> {
 
         return HttpResponse.ok(service.add(body))
     }
 
-    @Post(uri= "/subtract")
-    fun subtract (@Body body: OperationRequestBody): HttpResponse<OperationResponseBody>? {
+    @Post(uri = "/subtract")
+    fun subtract(@Body body: OperationRequestBody): HttpResponse<OperationResponseBody>? {
         return HttpResponse.ok(service.subtract(body))
     }
-
-
 }
