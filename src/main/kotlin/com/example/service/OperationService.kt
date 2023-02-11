@@ -8,7 +8,8 @@ class OperationService {
         val valueToAdd1 = operationRequestBody.value1
         val valueToAdd2 = operationRequestBody.value2
         val result = valueToAdd1!! + valueToAdd2!!
-        return OperationResponseBody("result of addition is $result ")
+        return OperationResponseBody("result of addition is $result")
+
     }
 
     fun subtract(operationRequestBody: OperationRequestBody): OperationResponseBody {
@@ -16,6 +17,7 @@ class OperationService {
         val valueToAdd2 = operationRequestBody.value2
         val result = valueToAdd1!! - valueToAdd2!!
         return OperationResponseBody("result of subtract is $result")
+
     }
 
 
