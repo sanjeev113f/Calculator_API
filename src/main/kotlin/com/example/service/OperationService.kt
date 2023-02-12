@@ -17,7 +17,6 @@ class OperationService {
         val valueToAdd2 = operationRequestBody.value2
         val result = valueToAdd1!! - valueToAdd2!!
         return OperationResponseBody("result of subtract is $result")
-
     }
 
 

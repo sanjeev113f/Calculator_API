@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class OperationServiceTest {
-
     @Test
     fun `should be able to add`() {
         // 1) arrange   2) act    3) assert
@@ -17,12 +16,11 @@ class OperationServiceTest {
 
         val actualResponseBody = operationService.add(dummyRequestBody)
         val expectedResponseBody = OperationResponseBody("result of addition is 6")
-
         assertEquals(actualResponseBody, expectedResponseBody)
     }
 
     @Test
-    fun `should be able to subract`() {
+    fun `should be able to subtract`() {
         // 1) arrange   2) act    3) assert
         val dummyRequestBody = OperationRequestBody()
         dummyRequestBody.value1 = 23
@@ -33,6 +31,5 @@ class OperationServiceTest {
         val expectedResponseBody = OperationResponseBody("result of subtract is 2")
 
         assertEquals(actualResponseBody, expectedResponseBody)
-
     }
 }
